@@ -1,0 +1,39 @@
+pragma solidity 0.4.18 <= 0.6.12;
+
+contract CarInsurnce{
+    
+    string customerName;
+    int amountOfInvoice;
+    string carMakeAndModel;
+    string companyAndDelearName;
+    string date;
+    string addressCustomer;
+    string invoiceNumber;
+
+
+    function CarInsurnce(string newcustomerName, int newamountOfInvoice, string newcarMakeAndModel, string newcompanyAndDelearName, string newdate, string newaddressCustomer, string newinvoiceNumber) public {
+    
+        customerName = newcustomerName;
+        amountOfInvoice= newamountOfInvoice;
+        carMakeAndModel= newcarMakeAndModel;
+        companyAndDelearName= newcompanyAndDelearName;
+        date = newdate;
+        addressCustomer = newaddressCustomer;
+        invoiceNumber =newinvoiceNumber;
+    }
+
+
+    function getCarInsurnce() public view returns(string,int,string,string,string,string,string) {
+        
+        return(customerName, amountOfInvoice, carMakeAndModel, companyAndDelearName, date, addressCustomer, invoiceNumber);
+    }
+    
+    
+    function setNameCarInsurnce(string newcustomerName, string newaddressCustomer) public {
+    
+    customerName = newcustomerName;
+    addressCustomer = newaddressCustomer;
+    
+        
+    }
+}
